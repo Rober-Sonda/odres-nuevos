@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Odres Nuevos</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<script>
+    const navbar = document.querySelector('.navbar');
+    const sections = document.querySelectorAll('.section');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const theme = entry.target.dataset.theme;
+          navbar.setAttribute('data-theme', theme);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+  
+    sections.forEach(section => observer.observe(section));
+  </script>
+  <script>
+    // Mostrar/ocultar botón "Volver arriba"
+    const backToTop = document.getElementById('backToTop');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+  
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  
+
+
+<body>
+  <header class="navbar">
+    <div class="logo">Odres Nuevos</div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#guardianes">Guardianes</a></li>
+          <li><a href="#discipulados">Discipulados</a></li>
+          <li><a href="#escuela">Escuela</a></li>
+          <li><a href="#reuniones">Reuniones</a></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <section id="inicio" class="hero section" data-theme="inicio">
+    <div class="hero-content">
+      <h1>Odres Nuevos: Restaurados para Cumplir Propósito</h1>
+      <p>Restaurar vidas, sanar corazones y activar el propósito eterno de Dios en cada persona.</p>
+      <a href="#reuniones" class="cta">Conocé más</a>
+    </div>
+  </section>
+
+  <section id="guardianes" class="section" data-theme="guardianes">
+    <h2>Guardianes del Reino</h2>
+    <img src="https://source.unsplash.com/800x400/?children,worship" alt="Niños adorando" />
+    <p>Formando generaciones firmes en la Palabra mediante juegos, dramatizaciones y adoración.</p>
+    <ul>
+      <li>Edades: 3 a 11 años</li>
+      <li>Domingos a las 18:00 hs</li>
+      <li>Modalidad presencial</li>
+    </ul>
+  </section>
+
+  <section id="discipulados" class="section" data-theme="discipulados">
+    <h2>Discipulados: Creciendo en intimidad con Dios</h2>
+    <p>Formación espiritual personalizada, conexión con otros y acompañamiento pastoral.</p>
+    <ul>
+      <li>Miércoles 20:00 hs</li>
+      <li>Sábados 10:00 hs</li>
+      <li>Presencial y virtual</li>
+    </ul>
+    <a href="#contacto" class="cta">Quiero sumarme</a>
+  </section>
+
+  <section id="escuela" class="section" data-theme="escuela">
+    <h2>Escuela de Formación Profética</h2>
+    <p>Formate para servir en el Reino con excelencia espiritual. Cada etapa activa una nueva dimensión del llamado.</p>
+  
+    <div class="card-container">
+  
+      <!-- CARD 1 - Próxima Escuela -->
+      <div class="card highlight">
+        <img src="https://source.unsplash.com/400x250/?bible,study" alt="Fundamentos Bíblicos" />
+        <div class="card-content">
+          <h3>Fundamentos Bíblicos</h3>
+          <p><strong>Orador:</strong> Pr. Daniel Ríos</p>
+          <p><strong>Inicio:</strong> <span class="date">5 de Julio</span> – 19:30 hs</p>
+          <p>Establece las bases doctrinales para una vida sólida en Cristo. Es la entrada esencial a la escuela profética.</p>
+          <span class="badge">🟢 Próxima Escuela</span>
+        </div>
+      </div>
+  
+      <!-- CARD 2 -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?prophecy,spirit" alt="Profecía" />
+        <div class="card-content">
+          <h3>Profecía Aplicada</h3>
+          <p><strong>Orador:</strong> Profeta Ana Torres</p>
+          <p><strong>Inicio:</strong> 2 de Marzo – 19:30 hs</p>
+          <p>Aprendé a identificar la voz de Dios, fluir con precisión y activar dones proféticos con propósito.</p>
+        </div>
+      </div>
+  
+      <!-- CARD 3 -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?identity,faith" alt="Identidad en Cristo" />
+        <div class="card-content">
+          <h3>Identidad en Cristo</h3>
+          <p><strong>Orador:</strong> Pastora Mónica Ruiz</p>
+          <p><strong>Inicio:</strong> 6 de Octubre – 19:30 hs</p>
+          <p>Redescubrí quién sos en Dios, desechando mentiras del pasado y afirmando tu valor eterno.</p>
+        </div>
+      </div>
+  
+      <!-- CARD 4 -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?intercession,prayer" alt="Intercesión" />
+        <div class="card-content">
+          <h3>Intercesión Estratégica</h3>
+          <p><strong>Orador:</strong> Apóstol Lucas Vera</p>
+          <p><strong>Inicio:</strong> 1 de Diciembre – 19:30 hs</p>
+          <p>Activá tu autoridad espiritual para cambiar atmósferas y pelear batallas del Reino en oración efectiva.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <section id="reuniones" class="section" data-theme="reuniones">
+    <h2>Reuniones</h2>
+    <ul>
+      <li>Domingos 18:00 hs – Reunión General</li>
+      <li>Martes 20:00 hs – Oración</li>
+      <li>Viernes 20:00 hs – Jóvenes</li>
+    </ul>
+    <p>Si compartís la visión de esta casa, ¡estás invitado!</p>
+    <iframe src="https://www.google.com/maps?q=Av.+Libertad+2345,+Córdoba,+Argentina&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer id="contacto">
+    <p>📍 Av. Libertad 2345, Córdoba Capital, Argentina</p>
+    <p>📞 +54 9 351 654-7890 — ✉ contacto@odresnuevos.org</p>
+    <p>
+      🌐 
+      <a href="https://instagram.com/odresnuevosiglesia" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/odresnuevosiglesia" target="_blank">Facebook</a> |
+      <a href="https://youtube.com/@odresnuevosministerio" target="_blank">YouTube</a>
+    </p>
+  </footer>
+  <button id="backToTop" title="Volver al inicio">⬆️</button>
+</body>
+</html>
