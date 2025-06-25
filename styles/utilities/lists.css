@@ -1,0 +1,83 @@
+/* === LISTS.CSS === */
+/* Estilos generales para listas */
+
+/* Reset básico para listas */
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  /* Listas base con estilo limpio */
+  ul {
+    padding-left: 1.6rem;
+    margin-top: 1rem;
+  }
+  ul li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  ul li::before {
+    content: '';
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #c47f00; /* punto dorado elegante */
+    border-radius: 50%;
+  }
+  
+  /* Listas personalizadas (ej: .custom-list) */
+  .custom-list {
+    padding-left: 1.6rem;
+    list-style: none !important;
+    margin-top: 1rem;
+  }
+  .custom-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+  }
+  .custom-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    background-color: #ffc107; /* punto dorado brillante */
+    border-radius: 50%;
+  }
+  
+  /* Listas centradas (usadas en secciones como Inicio, Guardianes, etc.) */
+  .custom-list-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  .custom-list-centered li {
+    max-width: 320px;
+  }
+  
+  /* Listas en componentes como cards o footer */
+  .card ul li::before,
+  .footer-box ul li::before {
+    background-color: #e8a200;
+  }
+  
+  /* Listas horizontales (si usas .inline-list) */
+  .inline-list {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+  }
+  .inline-list li {
+    padding: 0;
+  }
