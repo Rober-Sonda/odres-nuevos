@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <base href="/odres-nuevos/"> <!-- Siempre va primero -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Odres Nuevos</title>
@@ -25,29 +24,7 @@
   
     sections.forEach(section => observer.observe(section));
   </script>
-  <script>
-    // Mostrar/ocultar botón "Volver arriba"
-    const backToTop = document.getElementById('backToTop');
-  
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 600) {
-        backToTop.style.display = 'block';
-      } else {
-        backToTop.style.display = 'none';
-      }
-    });
-  
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
-  
-
-
-<body>
+  <body>
   <header class="navbar">
     <nav>
       <button class="menu-toggle" aria-label="Abrir menú">☰</button>
