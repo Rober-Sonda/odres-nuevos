@@ -48,7 +48,7 @@
     max-width: 320px;
 }
 .bg-guardianes {
-    background-image: url('../src/images/guardianes2.jpg');
+    background-image: url('../../src/images/guardianes2.jpg');
     background-size: cover;
     background-position: center;
     position: relative;

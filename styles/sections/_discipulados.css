@@ -48,7 +48,7 @@
     max-width: 320px;
 }
 .bg-discipulados {
-    background-image: url('../src/images/discipulados.jpg');
+    background-image: url('../../src/images/discipulados.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
