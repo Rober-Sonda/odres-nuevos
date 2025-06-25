@@ -47,126 +47,212 @@
 
 <body>
   <header class="navbar">
-    <div class="logo">Odres Nuevos</div>
     <nav>
-        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-        <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#guardianes">Guardianes</a></li>
-          <li><a href="#discipulados">Discipulados</a></li>
-          <li><a href="#escuela">Escuela</a></li>
-          <li><a href="#reuniones">Reuniones</a></li>
-        </ul>
-      </nav>
-      
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <div class="logo">Odres Nuevos</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#guardianes">Guardianes</a></li>
+        <li><a href="#discipulados">Discipulados</a></li>
+        <li><a href="#escuela">Escuelas</a></li>
+        <li><a href="#reuniones">Reuniones</a></li>
+      </ul>
+    </nav>
   </header>
+  
 
   <section id="inicio" class="hero section" data-theme="inicio">
     <div class="hero-content">
-      <h1>Odres Nuevos: Restaurados para Cumplir Propósito</h1>
+      <h1>Ministerio Odres Nuevos</h1>
+      <h2>Un nuevo tiempo de Dios para tu vida</h2>
       <p>Restaurar vidas, sanar corazones y activar el propósito eterno de Dios en cada persona.</p>
       <a href="#reuniones" class="cta">Conocé más</a>
     </div>
   </section>
 
-  <section id="guardianes" class="section" data-theme="guardianes">
-    <h2>Guardianes del Reino</h2>
-    <img src="https://source.unsplash.com/800x400/?children,worship" alt="Niños adorando" />
-    <p>Formando generaciones firmes en la Palabra mediante juegos, dramatizaciones y adoración.</p>
-    <ul>
-      <li>Edades: 3 a 11 años</li>
-      <li>Domingos a las 18:00 hs</li>
-      <li>Modalidad presencial</li>
-    </ul>
+  <section id="guardianes" class="section bg-guardianes" data-theme="guardianes">
+    <div class="section-overlay">
+      <h2>Guardianes del Reino</h2>
+      <p>Formando generaciones firmes en la Palabra mediante juegos, dramatizaciones y adoración.</p>
+      <ul class="custom-list">
+        <li>Edades: 3 a 11 años</li>
+        <li>Domingos a las 18:00 hs</li>
+        <li>Modalidad presencial</li>
+      </ul>
+    </div>
   </section>
+  
+  
 
-  <section id="discipulados" class="section" data-theme="discipulados">
-    <h2>Discipulados: Creciendo en intimidad con Dios</h2>
-    <p>Formación espiritual personalizada, conexión con otros y acompañamiento pastoral.</p>
-    <ul>
-      <li>Miércoles 20:00 hs</li>
-      <li>Sábados 10:00 hs</li>
-      <li>Presencial y virtual</li>
-    </ul>
-    <a href="#contacto" class="cta">Quiero sumarme</a>
+  <section id="discipulados" class="section bg-discipulados" data-theme="discipulados">
+    <div class="section-overlay">
+      <h2>Discipulados: Creciendo en intimidad con Dios</h2>
+      <p>Formación espiritual personalizada, conexión con otros y acompañamiento pastoral.</p>
+      <ul class="custom-list">
+        <li>Miércoles 20:00 hs</li>
+        <li>Sábados 10:00 hs</li>
+        <li>Presencial y virtual</li>
+      </ul>
+      <a href="#contacto" class="cta">Quiero sumarme</a>
+    </div>
   </section>
+  
 
   <section id="escuela" class="section" data-theme="escuela">
     <h2>Escuela de Formación Profética</h2>
     <p>Formate para servir en el Reino con excelencia espiritual. Cada etapa activa una nueva dimensión del llamado.</p>
   
     <div class="card-container">
-  
-      <!-- CARD 1 - Próxima Escuela -->
-      <div class="card highlight">
-        <img src="https://source.unsplash.com/400x250/?bible,study" alt="Fundamentos Bíblicos" />
+
+      <!-- CARD 1 -->
+      <div class="card card-logo-bg" data-date="2025-04-12">
+        <div class="card-overlay">
+          <div class="card-title-overlay">
+            <h3>Fundamentos Bíblicos</h3>
+          </div>
+        </div>
         <div class="card-content">
           <h3>Fundamentos Bíblicos</h3>
           <p><strong>Orador:</strong> Pr. Daniel Ríos</p>
-          <p><strong>Inicio:</strong> <span class="date">5 de Julio</span> – 19:30 hs</p>
-          <p>Establece las bases doctrinales para una vida sólida en Cristo. Es la entrada esencial a la escuela profética.</p>
-          <span class="badge">🟢 Próxima Escuela</span>
+          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
+          <p>Establece las bases doctrinales para una vida sólida en Cristo.</p>
         </div>
       </div>
-  
+      
+    
       <!-- CARD 2 -->
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?prophecy,spirit" alt="Profecía" />
+      <div class="card card-logo-bg" data-date="2025-06-21">
+        <div class="card-overlay">
+          <div class="card-title-overlay">
+            <h3>Profecía Aplicada</h3>
+          </div>
+        </div>
         <div class="card-content">
           <h3>Profecía Aplicada</h3>
           <p><strong>Orador:</strong> Profeta Ana Torres</p>
-          <p><strong>Inicio:</strong> 2 de Marzo – 19:30 hs</p>
+          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
           <p>Aprendé a identificar la voz de Dios, fluir con precisión y activar dones proféticos con propósito.</p>
         </div>
       </div>
-  
+    
       <!-- CARD 3 -->
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?identity,faith" alt="Identidad en Cristo" />
+      <div class="card card-logo-bg" data-date="2025-08-16">
+        <div class="card-overlay">
+          <div class="card-title-overlay">
+            <h3>Identidad en Cristo</h3>
+          </div>
+        </div>
         <div class="card-content">
           <h3>Identidad en Cristo</h3>
           <p><strong>Orador:</strong> Pastora Mónica Ruiz</p>
-          <p><strong>Inicio:</strong> 6 de Octubre – 19:30 hs</p>
+          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
           <p>Redescubrí quién sos en Dios, desechando mentiras del pasado y afirmando tu valor eterno.</p>
         </div>
       </div>
-  
+    
       <!-- CARD 4 -->
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?intercession,prayer" alt="Intercesión" />
+      <div class="card card-logo-bg" data-date="2025-10-18">
+        <div class="card-overlay">
+          <div class="card-title-overlay">
+            <h3>Intercesión Profética</h3>
+          </div>
+        </div>
         <div class="card-content">
-          <h3>Intercesión Estratégica</h3>
-          <p><strong>Orador:</strong> Apóstol Lucas Vera</p>
-          <p><strong>Inicio:</strong> 1 de Diciembre – 19:30 hs</p>
+          <h3>Intercesión Profética</h3>
+          <p><strong>Orador:</strong> Apóstol Lucas Vara</p>
+          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
           <p>Activá tu autoridad espiritual para cambiar atmósferas y pelear batallas del Reino en oración efectiva.</p>
         </div>
       </div>
-  
+    
     </div>
+    
   </section>
   
 
   <section id="reuniones" class="section" data-theme="reuniones">
     <h2>Reuniones</h2>
-    <ul>
+    <ul class="custom-list">
       <li>Domingos 18:00 hs – Reunión General</li>
-      <li>Martes 20:00 hs – Oración</li>
-      <li>Viernes 20:00 hs – Jóvenes</li>
+      <li>Martes 19:30 hs – Altares de adoración e intercesión</li>
+      <li>Sábados 11:00 hs – Guardianes del Reino</li>
     </ul>
-    <p>Si compartís la visión de esta casa, ¡estás invitado!</p>
-    <iframe src="https://www.google.com/maps?q=Av.+Libertad+2345,+Córdoba,+Argentina&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p>¡Estás invitado!</p>
+    <iframe src="https://www.google.com/maps?q=Av.+Avellaneda+635,+9 de julio,+Buenos Aires,+Argentina&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
-  <footer id="contacto">
-    <p>📍 Av. Libertad 2345, Córdoba Capital, Argentina</p>
-    <p>📞 +54 9 351 654-7890 — ✉ contacto@odresnuevos.org</p>
-    <p>
-      🌐 
-      <a href="https://instagram.com/odresnuevosiglesia" target="_blank">Instagram</a> |
-      <a href="https://facebook.com/odresnuevosiglesia" target="_blank">Facebook</a> |
-      <a href="https://youtube.com/@odresnuevosministerio" target="_blank">YouTube</a>
-    </p>
+  <footer id="contacto" class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <p><strong>📍 Dirección:</strong> Av. Avellaneda 635, 9 de julio, Buenos Aires, Argentina</p>
+        <p><strong>📞 Teléfono:</strong> +54 9 2317 566-684</p>
+        <p><strong>✉ Correo:</strong> <a href="mailto:odresnuevos2024.5@gmail.com">odresnuevos2024.5@gmail.com</a></p>
+      </div>
+      <div class="footer-social">
+        <p><strong>🌐 Redes Sociales</strong></p>
+        <ul class="social-links">
+          <li><a href="https://instagram.com/ministerioodresnuevos" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com/querit.odresnuevos" target="_blank">Facebook</a></li>
+          <li><a href="https://youtube.com/@odresnuevosministerio" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ministerio Odres Nuevos — Todos los derechos reservados.</p>
+    </div>
   </footer>
+  
   <button id="backToTop" title="Volver al inicio">⬆️</button>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date();
+      const cards = document.querySelectorAll('.card[data-date]');
+      let closestCard = null;
+      let minDiff = Infinity;
+  
+      // Formatear y mostrar la fecha en cada card
+      cards.forEach(card => {
+        const dateStr = card.dataset.date;
+        const [year, month, day] = dateStr.split('-').map(Number);
+        const date = new Date(year, month - 1, day);
+
+  
+        // Mostrar la fecha en formato "5 de Julio – 17:00 hs"
+        const options = { day: 'numeric', month: 'long' };
+        const fechaFormateada = new Intl.DateTimeFormat('es-AR', options).format(date);
+        const elementoFecha = card.querySelector('.fecha-inicio');
+        if (elementoFecha) {
+          elementoFecha.innerHTML = `<strong>Inicio:</strong> ${fechaFormateada} – 17:00 hs`;
+        }
+  
+        // Encontrar la próxima escuela
+        const diff = date - today;
+        if (diff >= 0 && diff < minDiff) {
+          minDiff = diff;
+          closestCard = card;
+        }
+      });
+  
+      // Marcar la próxima escuela con el badge
+      if (closestCard) {
+        const badge = document.createElement('span');
+        badge.classList.add('badge');
+        badge.textContent = '🟢 Próxima Escuela';
+        closestCard.querySelector('.card-content').appendChild(badge);
+        closestCard.classList.add('highlight');
+      }
+    });
+  </script>
+  
 </body>
 </html>

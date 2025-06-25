@@ -129,7 +129,6 @@ html {
   .hero-content {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2.5rem 2rem;
-    border-radius: 12px;
     max-width: 700px;
     animation: fadeIn 1.5s ease;
   }
@@ -384,3 +383,472 @@ html {
     background-color: #e8a200;
   }
   
+  .card-logo-bg {
+    background-image: url('../src/images/querit.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .card-title-overlay h3 {
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .card-content {
+    background-color: #fff;
+    color: #333;
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  /* Fondo personalizado para la sección Guardianes */
+/* Fondo para Guardianes */
+.bg-guardianes {
+  background-image: url('../src/images/guardianes2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+/* Fondo para Discipulados */
+.bg-discipulados {
+  background-image: url('../src/images/discipulados.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+/* Capa oscura encima del fondo */
+.section-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Lista elegante y centrada */
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Punto decorativo al lado del texto */
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 8px;
+  background-color: #ffc107; /* dorado claro */
+  border-radius: 50%;
+}
+
+
+
+/* Listas elegantes y sobrias para todo el sitio */
+ul {
+  padding-left: 1.6rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #c47f00; /* Elegante: naranja dorado */
+  border-radius: 50%;
+}
+.custom-list {
+  padding-left: 1.6rem;
+  list-style: none !important; /* <- Este evita los puntos predeterminados */
+  margin-top: 1rem;
+}
+
+/* Contenedor de secciones con fondo e imagen */
+.section-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo elegante y centrado de listas */
+.custom-list {
+  list-style: none !important;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrado horizontal */
+  gap: 0.8rem;
+}
+
+/* Cada ítem centrado con el punto decorativo */
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Punto dorado a la izquierda del texto */
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background-color: #ffc107;
+  border-radius: 50%;
+}
+
+
+
+
+.footer {
+  background-color: #1c1c1e;
+  color: #e0e0e0;
+  padding: 3rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-social {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-info p,
+.footer-social p {
+  margin: 0.5rem 0;
+}
+
+.footer-info a {
+  color: #ffe08c;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.social-links li {
+  margin-bottom: 0.5rem;
+}
+
+.social-links a {
+  color: #ffe08c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Sección Guardianes ocupando toda la ventana visible */
+#guardianes {
+  position: relative;       /* para que el overlay se posicione relativo a este */
+  height: 100vh;            /* 100% de altura del viewport */
+  width: 100vw;             /* ancho completo del viewport */
+  max-width: 100%;          /* evita que el max-width global limite */
+  overflow: hidden;         /* evitar scroll por contenido desbordado */
+}
+
+/* Overlay cubre todo el section */
+#guardianes .section-overlay {
+  position: absolute;       /* sobre el padre */
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.55);  /* fondo oscuro semitransparente */
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra verticalmente */
+  align-items: center;      /* centra horizontalmente */
+  text-align: center;
+  max-width: none;          /* quitar límite de ancho para que ocupe todo */
+  margin: 0;                /* quitar margen automático */
+  color: white;
+}
+
+/* Ajustes para texto dentro del overlay */
+#guardianes .section-overlay h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+#guardianes .section-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+#guardianes .custom-list {
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0;
+  margin-top: 0;
+  justify-content: center;
+  color: #fff;
+}
+
+#guardianes .custom-list li {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  max-width: 320px;
+}
+
+
+/* === DISCIPULADOS === */
+/* Sección Discipulados ocupando toda la ventana visible */
+#discipulados {
+  position: relative;       /* para que el overlay se posicione relativo a este */
+  height: 100vh;            /* 100% de altura del viewport */
+  width: 100vw;             /* ancho completo del viewport */
+  max-width: 100%;          /* evitar que max-width global limite */
+  overflow: hidden;         /* evitar scroll por contenido desbordado */
+}
+
+/* Overlay cubre todo el section Discipulados */
+#discipulados .section-overlay {
+  position: absolute;       /* posicionar sobre el padre */
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);  /* fondo negro semitransparente */
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centrar verticalmente */
+  align-items: center;      /* centrar horizontalmente */
+  text-align: center;
+  max-width: none;          /* quitar límite de ancho */
+  margin: 0;                /* eliminar margen automático */
+  color: white;
+}
+
+/* Ajustes para texto dentro del overlay Discipulados */
+#discipulados .section-overlay h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+#discipulados .section-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+#discipulados .custom-list {
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0;
+  margin-top: 0;
+  justify-content: center;
+  color: #fff;
+}
+
+#discipulados .custom-list li {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  max-width: 320px;
+}
+
+/* === INICIO === */
+/* Sección Inicio ocupando toda la ventana visible */
+#inicio {
+  position: relative;       /* para que el overlay se posicione relativo a este */
+  height: 100vh;            /* 100% de altura del viewport */
+  width: 100vw;             /* ancho completo del viewport */
+  max-width: 100%;          /* evitar que max-width global limite */
+  overflow: hidden;         /* evitar scroll por contenido desbordado */
+
+    /* Imagen de fondo para Inicio */
+    background-image: url('../src/images/odres-nuevos.png'); /* pon la ruta correcta de la imagen */
+    background-size: cover;       /* que cubra toda el área */
+    background-position: center;  /* centrada */
+    background-repeat: no-repeat; /* sin repetir */
+}
+
+/* Overlay cubre todo el section Inicio */
+#inicio .section-overlay {
+  position: absolute;       /* posicionar sobre el padre */
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);  /* fondo negro semitransparente */
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centrar verticalmente */
+  align-items: center;      /* centrar horizontalmente */
+  text-align: center;
+  max-width: none;          /* quitar límite de ancho */
+  margin: 0;                /* eliminar margen automático */
+  color: white;
+}
+
+/* Ajustes para texto dentro del overlay Inicio */
+#inicio .section-overlay h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+#inicio .section-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+#inicio .custom-list {
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0;
+  margin-top: 0;
+  justify-content: center;
+  color: #fff;
+}
+
+#inicio .custom-list li {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative; /* clave para posicionar hijos absolute relativos a nav */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;     /* justo debajo del navbar, pero como nav es el contenedor, queda al nivel del botón */
+    right: 0;      /* para alinearlo a la derecha si querés, o left: 0; para izquierda */
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    display: none;
+    padding: 1rem;
+    width: max-content; /* o ancho que quieras */
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  order: 0; /* primero */
+}
+
+.logo {
+  flex-grow: 1; /* ocupa todo el espacio disponible */
+  text-align: center;
+  order: 1;
+}
+
+.nav-links {
+  order: 2;
+  display: flex;
+  gap: 1rem;
+}
+
