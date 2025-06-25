@@ -115,23 +115,8 @@ html {
   }
   
   /* === HERO === */
-  .hero {
-    background: url('https://source.unsplash.com/1600x600/?worship,church') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 2rem;
-  }
+
   
-  .hero-content {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2.5rem 2rem;
-    max-width: 700px;
-    animation: fadeIn 1.5s ease;
-  }
   
   .hero h1 {
     font-size: 2.8rem;
@@ -800,19 +785,37 @@ ul li::before {
 
 /* === INICIO === */
 /* Sección Inicio ocupando toda la ventana visible */
-#inicio {
-  position: relative;       /* para que el overlay se posicione relativo a este */
-  height: 100vh;            /* 100% de altura del viewport */
-  width: 100vw;             /* ancho completo del viewport */
-  max-width: 100%;          /* evitar que max-width global limite */
-  overflow: hidden;         /* evitar scroll por contenido desbordado */
 
-    /* Imagen de fondo para Inicio */
-    background-image: url('../src/images/odres-nuevos.png'); /* pon la ruta correcta de la imagen */
-    background-size: cover;       /* que cubra toda el área */
-    background-position: center;  /* centrada */
-    background-repeat: no-repeat; /* sin repetir */
+
+#inicio {
+  width: 100vw;
+  height: 100vh; /* que ocupe toda la pantalla en altura */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  background: url('../src/images/odres-nuevos.png') center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
+
+.hero-content {
+  width: 100%;   /* ocupa todo el ancho */
+  height: 100%;  /* ocupa toda la altura */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra verticalmente el texto dentro del container */
+  align-items: center;      /* centra horizontalmente */
+  animation: fadeIn 1.5s ease;
+}
+
+
 
 /* Overlay cubre todo el section Inicio */
 #inicio .section-overlay {

@@ -1,0 +1,40 @@
+/* === SECCIÓN ESCUELA === */
+#escuela {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+}
+.bg-escuela {
+    background-image: url('../src/images/querit-background.webp.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#escuela .section-overlay {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+#escuela .section-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+#escuela .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1100px;
+}

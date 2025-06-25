@@ -1,0 +1,20 @@
+/* === MAIN.CSS === */
+@import url('base/_reset.css');
+
+@import url('components/_navbar.css');
+@import url('components/_hero.css');
+@import url('components/_footer.css');
+@import url('components/_buttons.css');
+@import url('components/_cards.css');
+
+@import url('sections/_inicio.css');
+@import url('sections/_guardianes.css');
+@import url('sections/_discipulados.css');
+@import url('sections/_escuela.css');
+@import url('sections/_reuniones.css');
+
+@import url('utilities/_animations.css');
+@import url('utilities/_themes.css');
+@import url('utilities/_lists.css');
+
+@import url('responsive/_responsive.css');
