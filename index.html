@@ -44,7 +44,7 @@
     
   
 
-    <section id="inicio">
+    <section id="inicio" class="section" data-theme="inicio">
       <div class="section-overlay"></div>
       <div class="hero-content">
         <h1>Un nuevo tiempo de Dios para tu vida</h1>
@@ -55,17 +55,23 @@
     </section>
 
 
-  <section id="guardianes" class="section bg-guardianes" data-theme="guardianes">
-    <div class="section-overlay">
-      <h2>Guardianes del Reino</h2>
-      <p>Formando generaciones firmes en la Palabra mediante juegos, dramatizaciones y adoración.</p>
-      <ul class="custom-list">
-        <li>Edades: 3 a 11 años</li>
-        <li>Domingos a las 18:00 hs</li>
-        <li>Modalidad presencial</li>
-      </ul>
-    </div>
-  </section>
+    <section id="guardianes" class="section bg-guardianes" data-theme="guardianes">
+      <div class="section-overlay">
+        <h2>Guardianes del Reino</h2>
+        <p>Formando generaciones firmes en la Palabra mediante juegos, dramatizaciones y adoración.</p>
+        
+        <ul class="custom-list">
+          <li>Edades: 3 a 11 años</li>
+          <li>Sábados a las 11:00 hs</li>
+          <li>Modalidad presencial</li>
+        </ul>
+        
+        <p class="invitacion">¡Traé a tus niños a descubrir que Dios no es solo una experiencia, sino un Padre que desea habitar en sus corazones cada día!</p>
+
+        <a href="#reuniones" class="cta-guardianes">Quiero llevarlos</a>
+      </div>
+    </section>
+    
   
   
 
@@ -91,68 +97,67 @@
       <div class="card-container">
 
       <!-- CARD 1 -->
-      <div class="card card-logo-bg" data-date="2025-04-12">
-        <div class="card-overlay">
-          <div class="card-title-overlay">
-            <h3>Fundamentos Bíblicos</h3>
+      <div class="card" data-date="2025-04-12">
+        <div class="card-image">
+          <div class="card-image-overlay">
+            <h3 class="card-title-overlay">Fundamentos Bíblicos</h3>
           </div>
         </div>
         <div class="card-content">
-          <h3>Fundamentos Bíblicos</h3>
           <p><strong>Orador:</strong> Pr. Daniel Ríos</p>
-          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
+          <p class="fecha-inicio"></p>
           <p>Establece las bases doctrinales para una vida sólida en Cristo.</p>
         </div>
       </div>
       
+      
     
       <!-- CARD 2 -->
-      <div class="card card-logo-bg" data-date="2025-06-21">
-        <div class="card-overlay">
-          <div class="card-title-overlay">
-            <h3>Profecía Aplicada</h3>
+      <div class="card card-profecia" data-date="2025-06-21">
+        <div class="card-image">
+          <div class="card-image-overlay">
+            <h3 class="card-title-overlay">Profecía Aplicada</h3>
           </div>
         </div>
         <div class="card-content">
-          <h3>Profecía Aplicada</h3>
           <p><strong>Orador:</strong> Profeta Ana Torres</p>
           <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
           <p>Aprendé a identificar la voz de Dios, fluir con precisión y activar dones proféticos con propósito.</p>
         </div>
       </div>
+      
+      
+      
     
       <!-- CARD 3 -->
       <div class="card card-logo-bg" data-date="2025-08-16">
-        <div class="card-overlay">
-          <div class="card-title-overlay">
-            <h3>Identidad en Cristo</h3>
+        <div class="card-image">
+          <div class="card-image-overlay">
+            <h3 class="card-title-overlay">Identidad en Cristo</h3>
           </div>
         </div>
         <div class="card-content">
-          <h3>Identidad en Cristo</h3>
           <p><strong>Orador:</strong> Pastora Mónica Ruiz</p>
           <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
           <p>Redescubrí quién sos en Dios, desechando mentiras del pasado y afirmando tu valor eterno.</p>
         </div>
       </div>
+      
     
       <!-- CARD 4 -->
       <div class="card card-logo-bg" data-date="2025-10-18">
-        <div class="card-overlay">
-          <div class="card-title-overlay">
-            <h3>Intercesión Profética</h3>
+        <div class="card-image">
+          <div class="card-image-overlay">
+            <h3 class="card-title-overlay">Intercesión Profética</h3>
           </div>
         </div>
         <div class="card-content">
-          <h3>Intercesión Profética</h3>
           <p><strong>Orador:</strong> Apóstol Lucas Vara</p>
           <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
           <p>Activá tu autoridad espiritual para cambiar atmósferas y pelear batallas del Reino en oración efectiva.</p>
         </div>
-      </div>
-    
+      </div>      
     </div>
-  
   </section>
   
   <section id="reuniones" class="section" data-theme="reuniones">
@@ -204,23 +209,21 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Código menú hamburguesa
       const menuToggle = document.querySelector('.menu-toggle');
       const navLinks = document.querySelector('.nav-links');
   
-      // Alternar el menú al hacer clic en el botón
       menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation(); // evita cierre inmediato
+        e.stopPropagation();
         navLinks.classList.toggle('active');
       });
   
-      // Cerrar el menú al hacer clic en un enlace del menú
       document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
           navLinks.classList.remove('active');
         });
       });
   
-      // Cerrar el menú al hacer clic fuera
       document.addEventListener('click', (e) => {
         const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
         if (!isClickInside) {
@@ -228,19 +231,17 @@
         }
       });
   
-      // === Lógica de tarjetas con fechas ===
+      // Lógica para las fechas y tarjetas
       const today = new Date();
       const cards = document.querySelectorAll('.card[data-date]');
       let closestCard = null;
       let minDiff = Infinity;
   
-      // Formatear y mostrar la fecha en cada card
       cards.forEach(card => {
         const dateStr = card.dataset.date;
         const [year, month, day] = dateStr.split('-').map(Number);
         const date = new Date(year, month - 1, day);
   
-        // Mostrar la fecha en formato "5 de Julio – 17:00 hs"
         const options = { day: 'numeric', month: 'long' };
         const fechaFormateada = new Intl.DateTimeFormat('es-AR', options).format(date);
         const elementoFecha = card.querySelector('.fecha-inicio');
@@ -248,7 +249,6 @@
           elementoFecha.innerHTML = `<strong>Inicio:</strong> ${fechaFormateada} – 17:00 hs`;
         }
   
-        // Encontrar la próxima escuela
         const diff = date - today;
         if (diff >= 0 && diff < minDiff) {
           minDiff = diff;
@@ -256,7 +256,6 @@
         }
       });
   
-      // Marcar la próxima escuela con el badge
       if (closestCard) {
         const badge = document.createElement('span');
         badge.classList.add('badge');
@@ -264,8 +263,58 @@
         closestCard.querySelector('.card-content').appendChild(badge);
         closestCard.classList.add('highlight');
       }
+  
+      // NUEVO: Cambio de tema en navbar según sección visible
+      const navbar = document.querySelector('.navbar');
+      const sections = document.querySelectorAll('.section');
+  
+      // Función para obtener la sección más visible en la ventana
+      function getMostVisibleSection() {
+        let maxVisibleHeight = 0;
+        let mostVisibleSection = null;
+  
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          // Calcula altura visible dentro de viewport (limita entre 0 y altura viewport)
+          const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+          if (visibleHeight > maxVisibleHeight) {
+            maxVisibleHeight = visibleHeight;
+            mostVisibleSection = section;
+          }
+        });
+  
+        return mostVisibleSection;
+      }
+  
+      // Actualiza el tema del navbar basado en la sección más visible
+      function updateNavbarTheme() {
+        const section = getMostVisibleSection();
+        if (section) {
+          const theme = section.dataset.theme || 'default';
+          navbar.setAttribute('data-theme', theme);
+        }
+      }
+  
+      // Observador para detectar cambios de visibilidad (menos thresholds para mejor performance)
+      const observer = new IntersectionObserver(() => {
+        updateNavbarTheme();
+      }, {
+        threshold: [0.25, 0.5, 0.75, 1]
+      });
+  
+      sections.forEach(section => observer.observe(section));
+  
+      // También actualizar el tema al hacer scroll (más fluido y preciso)
+      window.addEventListener('scroll', () => {
+        updateNavbarTheme();
+      });
+  
+      // Actualizar al cargar la página
+      updateNavbarTheme();
     });
   </script>
+  
+  
   
   
 </body>
