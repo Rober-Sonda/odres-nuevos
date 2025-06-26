@@ -1,4 +1,17 @@
-/* === NAVBAR === */
+/* ====== BASE - Reset básico general ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ::marker reset para compatibilidad */
+li::marker {
+    content: "";
+    display: none;
+}
+
+/* ====== NAVBAR GENERAL ======= */
 .navbar {
     position: fixed;
     top: 0;
@@ -6,13 +19,37 @@
     background: rgba(196, 127, 0, 0.95);
     color: white;
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-sizing: border-box;
     z-index: 999;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6px);
 }
+
+/* ====== NAV CONTAINER ======= */
+nav {
+    display: flex;
+    align-items: center;           /* centra verticalmente */
+    justify-content: space-between;
+    position: relative;
+    height: 60px;                  /* fija altura para mejor control */
+}
+
+/* ====== LOGO ======= */
+.logo-container {
+    display: flex;
+    align-items: center;           /* centra verticalmente */
+    flex-shrink: 0;                /* que no se reduzca */
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    line-height: 1;                /* evita espacio extra vertical */
+}
+
+/* ====== BOTÓN MENÚ MOBILE ======= */
 .menu-toggle {
     display: none;
     background: none;
@@ -20,46 +57,133 @@
     font-size: 2rem;
     color: white;
     cursor: pointer;
+    align-self: center;            /* asegura centrado vertical */
 }
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
+
+/* ====== LINKS DE NAVEGACIÓN ======= */
 .nav-links {
-    list-style: none;
+    list-style: none;              /* elimina viñetas */
+    margin: 0;
+    padding: 0;
     display: flex;
     gap: 1.5rem;
+    align-items: center;           /* centra verticalmente */
+    height: 100%;                  /* igual altura que nav */
 }
+
+/* Elimina margen, padding y viñetas de li */
+.nav-links li {
+    list-style: none;              /* elimina viñetas */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Oculta marcador ::marker por compatibilidad */
+.nav-links li::marker {
+    content: none;
+    display: none;
+}
+
+/* ====== ENLACES DEL MENÚ ======= */
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    line-height: 1;
+    display: flex;
+    align-items: center;           /* centrado vertical */
+    padding: 0;
+    margin: 0;
 }
+
 .nav-links a:hover {
     color: #ffe08c;
 }
+
+/* ======== MEDIA QUERY para mobile ======== */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
     .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        flex-direction: column;
-        display: none;
-        padding: 1rem;
+      position: absolute;
+      top: 60px; /* justo debajo del nav */
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9); /* color oscuro con transparencia */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      flex-direction: column;
+      display: none;
+      padding: 1rem 0;
+      margin: 0;
+      z-index: 998;
+      animation: fadeInDown 0.3s ease forwards;
     }
+  
     .nav-links.active {
-        display: flex;
+      display: flex;
     }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+  
     .nav-links a {
-        padding: 1rem;
-        font-size: 1.2rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        line-height: 1;
+        display: inline-flex; /* mejor que flex aquí */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: 100%; /* opcional, para centrar verticalmente */
     }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background-color 0.3s ease;
+    }
+  
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+
+/* Animación para menú mobile */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links, .nav-links ul {
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li::before,
+.nav-links li::marker {
+    content: normal !important;
+    display: none !important;
 }
