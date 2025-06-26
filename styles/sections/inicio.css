@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     position: relative;
-    background: url('../../src/images/odres-nuevos.png') center center/cover no-repeat;
+    background: url('../src/images/odres-nuevos.png') center center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
