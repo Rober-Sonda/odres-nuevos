@@ -48,8 +48,8 @@
       <div class="section-overlay"></div>
       <div class="hero-content">
         <h1>Un nuevo tiempo de Dios para tu vida</h1>
-        <h2>No te rindas: cada día es una nueva oportunidad</h2>
-        <p>Estamos para restaurar vidas, sanar corazones y activar el propósito eterno de Dios en vos.</p>
+        <h2>Siempre y cuando no te rindas tendrás una nueva oportunidad</h2>
+        <p>Estamos para restaurar vidas, sanar corazones y activar el propósito eterno de Dios en las personas.</p>
         <a href="#reuniones" class="cta">Conocé más</a>
       </div>
     </section>
@@ -200,13 +200,29 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.querySelector('.menu-toggle');
       const navLinks = document.querySelector('.nav-links');
-
-      menuToggle.addEventListener('click', () => {
+  
+      // Alternar el menú al hacer clic en el botón
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // evita cierre inmediato
         navLinks.classList.toggle('active');
       });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
+  
+      // Cerrar el menú al hacer clic en un enlace del menú
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+  
+      // Cerrar el menú al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
+        if (!isClickInside) {
+          navLinks.classList.remove('active');
+        }
+      });
+  
+      // === Lógica de tarjetas con fechas ===
       const today = new Date();
       const cards = document.querySelectorAll('.card[data-date]');
       let closestCard = null;
@@ -217,7 +233,6 @@
         const dateStr = card.dataset.date;
         const [year, month, day] = dateStr.split('-').map(Number);
         const date = new Date(year, month - 1, day);
-
   
         // Mostrar la fecha en formato "5 de Julio – 17:00 hs"
         const options = { day: 'numeric', month: 'long' };
@@ -245,6 +260,7 @@
       }
     });
   </script>
+  
   
 </body>
 </html>

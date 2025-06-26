@@ -105,20 +105,55 @@ nav {
 
 /* ======== MEDIA QUERY para mobile ======== */
 @media (max-width: 768px) {
-    .nav-links {
-      position: absolute;
-      top: 60px; /* justo debajo del nav */
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.9); /* color oscuro con transparencia */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      flex-direction: column;
-      display: none;
-      padding: 1rem 0;
-      margin: 0;
-      z-index: 998;
-      animation: fadeInDown 0.3s ease forwards;
-    }
+    nav {
+        position: relative;
+        justify-content: flex-end; /* empuja botón de menú a la derecha */
+      }
+    
+      .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        order: 0; /* opcional, ya que está absolute */
+      }
+    
+      .menu-toggle {
+        order: 2;
+        z-index: 1000; /* para estar encima del logo si se superponen */
+      }
+
+      .logo-text {
+        display: none; /* ocultar texto */
+      }
+    
+      .logo-container::before {
+        content: "";
+        display: block;
+        width: 120px;  /* ajustá según tu logo */
+        height: 40px;
+        background-image: url('../src/images/odres-nuevos.png'); /* reemplazá con tu ruta */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px; /* debajo del nav */
+        left: 0;
+        width: 100%;
+        height: calc(51vh - 59px); /* todo el alto disponible menos la navbar */
+        background-color: rgba(0, 0, 0, 0.9);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        display: none;
+        padding: 0;
+        margin: 0;
+        z-index: 998;
+        animation: fadeInDown 0.3s ease forwards;
+        overflow-y: auto; /* scroll si no entra todo */
+      }
+      
   
     .nav-links.active {
       display: flex;
@@ -155,6 +190,11 @@ nav {
     .nav-links a:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
+
+    html {
+        scroll-behavior: smooth;
+    }
+      
   }
   
 
