@@ -1,0 +1,174 @@
+/* Estilos generales del sitio */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Quicksand:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap');
+      /* Fuentes personalizadas */
+      .font-montserrat {
+        font-family: 'Montserrat', sans-serif;
+      }
+      .font-open-sans {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      /* Estilos personalizados para el cambio de tema del navbar. */
+      .navbar {
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+      }
+      .navbar[data-theme='inicio'] {
+        @apply bg-transparent text-white;
+      }
+      .navbar[data-theme='guardianes'] {
+        @apply bg-orange-700 text-white; /* Más intenso para el navbar */
+      }
+      .navbar[data-theme='discipulados'] {
+        @apply bg-teal-700 text-white; /* Más intenso para el navbar */
+      }
+      .navbar[data-theme='escuela'] {
+        @apply bg-blue-700 text-white; /* Ahora azul para el navbar de escuela */
+      }
+      .navbar[data-theme='reuniones'] {
+        @apply bg-purple-800 text-white; /* Más intenso para el navbar */
+      }
+      .navbar[data-theme='default'] {
+        @apply bg-gray-800 text-white;
+      }
+
+      /* Estilos para enlaces del navbar */
+      .nav-link-item a {
+        position: relative;
+        overflow: hidden;
+      }
+      .nav-link-item a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor; /* Usa el color del texto del enlace */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-out;
+      }
+      .nav-link-item a:hover::after,
+      .nav-link-item a.active::after {
+        transform: translateX(0);
+      }
+
+      /* Efecto de fondo sutil para las secciones (principalmente para Hero) */
+      .section-overlay {
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.7), /* Más oscuro arriba */
+          rgba(0, 0, 0, 0.5)  /* Menos oscuro abajo */
+        );
+      }
+
+      /* Animación del menú móvil */
+      .nav-links-mobile-open {
+        animation: slideIn 0.3s ease-out forwards;
+      }
+      .nav-links-mobile-close {
+        animation: slideOut 0.3s ease-in forwards;
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideOut {
+        from {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+      }
+
+      /* Estilo para el badge de "Próxima Escuela" */
+      .badge-upcoming {
+        animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      /* Estilos específicos para la sección de Escuela y tarjetas */
+      .card-image-overlay {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+      }
+
+      /* Fondo degradado para el sitio (BODY) */
+      body {
+        background: linear-gradient(to bottom, #dbeafe, #bfdbfe, #c4b5fd, #a78bfa, #fbcfe8); /* Degradado suave azul-morado-rosa */
+        background-attachment: fixed; /* Para que el fondo no se mueva con el scroll */
+      }
+
+      /* Fondos de las secciones ahora son transparentes o ligeramente opacos para permitir el degradado del body */
+      .section {
+        background-color: rgba(255, 255, 255, 0.85); /* Blanco ligeramente opaco para el contenido */
+        backdrop-filter: blur(10px); /* Un ligero blur para interactuar con el fondo */
+        -webkit-backdrop-filter: blur(10px); /* Para navegadores Safari */
+        padding-top: 6rem; /* Ajuste para no quedar debajo del navbar fijo */
+        padding-bottom: 6rem;
+        margin-bottom: 2rem; /* Espacio entre secciones */
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      #inicio {
+        background-color: #cfd8ff; /* azul muy claro */
+      }
+
+      /* Los contenedores internos de las secciones tienen los colores específicos */
+      #guardianes .container {
+        background-color: #ffeccf; /* Naranja muy claro */
+      }
+      #discipulados .container {
+        background-color: #d1fae5; /* Verde azulado muy claro */
+      }
+      #escuela .container {
+        background-color: #e0f2fe; /* Azul claro para la escuela */
+      }
+      #reuniones .container {
+        background-color: #e9d5ff; /* Púrpura muy claro */
+      }
+
+
+      /* Ajustes para las tarjetas de la escuela en móvil */
+      @media (max-width: 767px) {
+        #escuela .grid-cols-4 { /* Apuntamos directamente al grid de las cards */
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        #escuela .card { /* Añadimos margen inferior para espacio entre cards en móvil */
+          margin-bottom: 2rem;
+        }
+      }
+
+      /* Reducción de los efectos de hover */
+      .transform {
+        transition-property: transform, opacity, box-shadow; /* Asegurarse de que la opacidad y sombra también tengan transición */
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms; /* Un poco más suave */
+      }
+      .transform:hover {
+        transform: scale(1.01); /* Un acercamiento mucho más sutil */
+        opacity: 0.98; /* Ligeramente más opaco */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra ligeramente más grande */
+      }
+      .transform:active {
+        transform: scale(1); /* Regresar al tamaño normal al hacer clic */
+        opacity: 1;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }

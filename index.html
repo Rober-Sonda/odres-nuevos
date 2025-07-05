@@ -1,321 +1,473 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Odres Nuevos</title>
-    <link rel="stylesheet" href="styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odres Nuevos - Un Nuevo Tiempo de Dios para Tu Vida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   </head>
-  
-<script>
-    const navbar = document.querySelector('.navbar');
-    const sections = document.querySelectorAll('.section');
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const theme = entry.target.dataset.theme;
-          navbar.setAttribute('data-theme', theme);
-        }
-      });
-    }, {
-      threshold: 0.5
-    });
-  
-    sections.forEach(section => observer.observe(section));
-  </script>
-  <body>
-    
-    <header class="navbar">
-      <nav>
-        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-        <div class="logo-container">
-          <div class="logo-text">Odres Nuevos</div>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#guardianes">Guardianes</a></li>
-          <li><a href="#discipulados">Discipulados</a></li>
-          <li><a href="#escuela">Escuelas</a></li>
-          <li><a href="#reuniones">Reuniones</a></li>
-        </ul>
-      </nav>
+  <body class="font-open-sans text-gray-900">
+    <header class="navbar fixed w-full z-50 py-4 transition duration-300 ease-in-out" data-theme="inicio">
+<nav class="container mx-auto flex items-center justify-between px-4 md:px-6 py-2 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm rounded-lg shadow-md mt-2">
+  <!-- Logo -->
+  <div class="logo-container">
+    <div class="logo-text text-2xl md:text-3xl font-extrabold text-gray-800 dark:text-white font-montserrat tracking-tight">
+      Odres Nuevos
+    </div>
+  </div>
+
+  <!-- Mobile menu button -->
+  <button
+    class="menu-toggle md:hidden text-gray-800 dark:text-white text-2xl hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200"
+    aria-label="Abrir menú"
+  >
+    ☰
+  </button>
+
+  <!-- Nav links -->
+  <ul
+    class="nav-links hidden flex-col absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-xl md:flex md:flex-row md:static md:shadow-none md:bg-transparent dark:md:bg-transparent space-y-1 md:space-y-0 md:space-x-5 lg:space-x-8 transition-all duration-300 ease-in-out md:items-center md:flex-grow z-50 rounded-b-lg md:rounded-none"
+  >
+    <li class="nav-link-item">
+      <a href="#inicio" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-300 transition font-semibold">Inicio</a>
+    </li>
+    <li class="nav-link-item">
+      <a href="#guardianes" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-300 transition font-semibold">Guardianes</a>
+    </li>
+    <li class="nav-link-item">
+      <a href="#discipulados" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition font-semibold">Discipulados</a>
+    </li>
+    <li class="nav-link-item">
+      <a href="#escuela" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition font-semibold">Escuelas</a>
+    </li>
+    <li class="nav-link-item">
+      <a href="#reuniones" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-300 transition font-semibold">Reuniones</a>
+    </li>
+  </ul>
+</nav>
+
+
     </header>
-    
-  
 
-    <section id="inicio" class="section" data-theme="inicio">
-      <div class="section-overlay"></div>
-      <div class="hero-content">
-        <h1>Un nuevo tiempo de Dios para tu vida</h1>
-        <h2>Siempre y cuando no te rindas tendrás una nueva oportunidad</h2>
-        <p>Estamos para restaurar vidas, sanar corazones y activar el propósito eterno de Dios en las personas.</p>
-        <a href="#reuniones" class="cta">Conocé más</a>
+    <section
+      id="inicio"
+      class="section relative min-h-screen py-16 px-4 flex items-center justify-center"
+      data-theme="inicio"
+    >
+      <div class="section-overlay absolute inset-0 backdrop-blur-sm"></div>
+
+      <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12 p-6 md:p-14 bg-black bg-opacity-30 rounded-xl shadow-2xl">
+          <div class="md:w-1/2 flex justify-center order-2 md:order-1">
+          <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+          alt="Imagen inicio"
+          class="rounded-xl shadow-lg w-full h-auto object-cover max-w-md md:max-w-full transform"/>
+        </div>
+        <div class="md:w-1/2 text-center md:text-left order-1 md:order-2">
+          <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight font-montserrat text-teal-700">
+          </h1>
+          <h2 class="text-3xl md:text-4xl font-semibold mb-8 font-open-sans text-gray-700">
+          </h2>
+          <p class="text-lg md:text-xl mb-10 leading-relaxed font-open-sans text-gray-300 max-w-2xl mx-auto md:mx-0">
+          </p>
+          <a
+            href="#reuniones"
+            class="cta inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-10 rounded-full text-xl shadow-lg transition-all duration-300 ease-in-out font-montserrat transform"
+          >
+          </a>
+        </div>
+
       </div>
     </section>
 
 
-    <section id="guardianes" class="section bg-guardianes" data-theme="guardianes">
-      <div class="section-overlay">
-        <h2>Guardianes del Reino</h2>
-        <p>Formando generaciones firmes en la Palabra mediante juegos, dramatizaciones y adoración.</p>
-        
-        <ul class="custom-list">
-          <li>Edades: 3 a 11 años</li>
-          <li>Sábados a las 11:00 hs</li>
-          <li>Modalidad presencial</li>
-        </ul>
-        
-        <p class="invitacion">¡Traé a tus niños a descubrir que Dios no es solo una experiencia, sino un Padre que desea habitar en sus corazones cada día!</p>
+    <section
+      id="guardianes"
+      class="section relative min-h-screen py-16 px-4 flex items-center justify-center"
+      data-theme="guardianes"
+    >
+      <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 p-8 rounded-2xl shadow-xl max-w-6xl transform">
+        <div class="md:w-1/2 flex justify-center order-2 md:order-1">
+          <img
+            src="https://img.freepik.com/foto-gratis/ninos-sonrientes-tomas-medias-posando-juntos_23-2149073581.jpg?w=740&t=st=1708198800~exp=1708199400~hmac=5301259930e6318c289c69f1b2a289a8561126130635197b3d676146b5409532"
+            alt="Niños felices en actividades de iglesia"
+            class="rounded-xl shadow-lg w-full h-auto object-cover max-w-md md:max-w-full transform"
+          />
+        </div>
+        <div class="md:w-1/2 text-center md:text-left order-1 md:order-2">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-orange-700 mb-6 font-montserrat">
+            </h2>
+          <p class="text-lg md:text-xl mb-8 leading-relaxed font-open-sans text-gray-700">
+            </p>
 
-        <a href="#reuniones" class="cta-guardianes">Quiero llevarlos</a>
+          <ul class="list-disc list-inside text-lg md:text-xl space-y-3 mb-8 text-gray-700 font-open-sans">
+            <li>Edades: <strong class="font-semibold"></strong></li>
+            <li>Horario: <strong class="font-semibold"></strong></li>
+            <li>Modalidad: <strong class="font-semibold"></strong></li>
+          </ul>
+
+          <p class="text-xl md:text-2xl font-semibold mb-10 italic text-orange-600 font-open-sans">
+            </p>
+
+          <a
+            href="#reuniones"
+            class="cta-guardianes inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-10 rounded-full text-xl shadow-lg transition-all duration-300 ease-in-out font-montserrat transform"
+            ></a
+          >
+        </div>
       </div>
     </section>
-    
-  
-  
 
-  <section id="discipulados" class="section bg-discipulados" data-theme="discipulados">
-    <div class="section-overlay">
-      <h2>Discipulados: Creciendo en intimidad con Dios</h2>
-      <p>Formación espiritual personalizada, conexión con otros y acompañamiento pastoral.</p>
-      <ul class="custom-list">
-        <li>Miércoles 20:00 hs</li>
-        <li>Sábados 10:00 hs</li>
-        <li>Presencial y virtual</li>
-      </ul>
-      <a href="#contacto" class="cta">Quiero sumarme</a>
-    </div>
-  </section>
-  
+    <section
+      id="discipulados"
+      class="section relative min-h-screen py-16 px-4 flex items-center justify-center"
+      data-theme="discipulados"
+    >
+      <div class="container mx-auto flex flex-col md:flex-row-reverse items-center gap-12 p-8 rounded-2xl shadow-xl max-w-6xl transform">
+        <div class="md:w-1/2 flex justify-center order-2 md:order-1">
+          <img
+            src="https://img.freepik.com/foto-gratis/ninos-sonrientes-tomas-medias-posando-juntos_23-2149073581.jpg?w=740&t=st=1708198800~exp=1708199400~hmac=5301259930e6318c289c69f1b2a289a8561126130635197b3d676146b5409532"
+            alt="Personas en estudio bíblico"
+            class="rounded-xl shadow-lg w-full h-auto object-cover max-w-md md:max-w-full transform"
+          />
+        </div>
+        <div class="md:w-1/2 text-center md:text-left order-1 md:order-2">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-teal-700 mb-6 font-montserrat">
+            </h2>
+          <p class="text-lg md:text-xl mb-8 leading-relaxed font-open-sans text-gray-700">
+            </p>
+          <ul class="list-disc list-inside text-lg md:text-xl space-y-3 mb-8 text-gray-700 font-open-sans">
+            <li>Miércoles: <strong class="font-semibold"></strong></li>
+            <li>Sábados: <strong class="font-semibold"></strong></li>
+            <li>Modalidad: <strong class="font-semibold"></strong></li>
+          </ul>
+          <a
+            href="#contacto"
+            class="cta inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-10 rounded-full text-xl shadow-lg transition-all duration-300 ease-in-out font-montserrat transform"
+            ></a
+          >
+        </div>
+      </div>
+    </section>
 
-  <section id="escuela" class="section bg-escuela" data-theme="escuela">
-    <div class="section-overlay">
-      <h2>Escuela de Formación Profética</h2>
-      <p>Formate para servir en el Reino con excelencia espiritual. Cada etapa activa una nueva dimensión del llamado.</p>
-  
-      <div class="card-container">
-
-      <!-- CARD 1 -->
-      <div class="card" data-date="2025-04-12">
-        <div class="card-image">
-          <div class="card-image-overlay">
-            <h3 class="card-title-overlay">Fundamentos Bíblicos</h3>
-          </div>
-        </div>
-        <div class="card-content">
-          <p><strong>Orador:</strong> Pr. Daniel Ríos</p>
-          <p class="fecha-inicio"></p>
-          <p>Establece las bases doctrinales para una vida sólida en Cristo.</p>
-        </div>
-      </div>
-      
-      
-    
-      <!-- CARD 2 -->
-      <div class="card card-profecia" data-date="2025-06-21">
-        <div class="card-image">
-          <div class="card-image-overlay">
-            <h3 class="card-title-overlay">Profecía Aplicada</h3>
-          </div>
-        </div>
-        <div class="card-content">
-          <p><strong>Orador:</strong> Profeta Ana Torres</p>
-          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
-          <p>Aprendé a identificar la voz de Dios, fluir con precisión y activar dones proféticos con propósito.</p>
-        </div>
-      </div>
-      
-      
-      
-    
-      <!-- CARD 3 -->
-      <div class="card card-logo-bg" data-date="2025-08-16">
-        <div class="card-image">
-          <div class="card-image-overlay">
-            <h3 class="card-title-overlay">Identidad en Cristo</h3>
-          </div>
-        </div>
-        <div class="card-content">
-          <p><strong>Orador:</strong> Pastora Mónica Ruiz</p>
-          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
-          <p>Redescubrí quién sos en Dios, desechando mentiras del pasado y afirmando tu valor eterno.</p>
-        </div>
-      </div>
-      
-    
-      <!-- CARD 4 -->
-      <div class="card card-logo-bg" data-date="2025-10-18">
-        <div class="card-image">
-          <div class="card-image-overlay">
-            <h3 class="card-title-overlay">Intercesión Profética</h3>
-          </div>
-        </div>
-        <div class="card-content">
-          <p><strong>Orador:</strong> Apóstol Lucas Vara</p>
-          <p class="fecha-inicio"></p> <!-- se completa automáticamente -->
-          <p>Activá tu autoridad espiritual para cambiar atmósferas y pelear batallas del Reino en oración efectiva.</p>
-        </div>
-      </div>      
-    </div>
-  </section>
-  
-  <section id="reuniones" class="section" data-theme="reuniones">
-    <div class="reuniones-container">
-      <div class="reuniones-info">
-        <h2>Reuniones</h2>
-        <ul class="custom-list">
-          <li>Domingos 18:00 hs – Reunión General</li>
-          <li>Martes 19:30 hs – Altares de adoración e intercesión</li>
-          <li>Sábados 11:00 hs – Guardianes del Reino</li>
-        </ul>
-        <p>¡Estás invitado!</p>
-      </div>
-      <div class="reuniones-mapa" style="max-width: 600px; width: 100%;">
-        <iframe
-          width="100%"
-          height="300"
-          style="border:0"
-          loading="lazy"
-          allowfullscreen
-          src="https://maps.google.com/maps?q=Avellaneda%20635%2C%209%20de%20Julio%2C%20Buenos%20Aires%2C%20Argentina&hl=es&z=16&output=embed&markers=Avellaneda%20635%2C%209%20de%20Julio%2C%20Buenos%20Aires%2C%20Argentina">
-        </iframe>
-      </div>
-      
-      
-    </div>
-  </section>
-  
-  <footer id="contacto" class="footer">
-    <div class="footer-container">
-      <div class="footer-box footer-info">
-        <p><strong>📍 Dirección:</strong> Av. Avellaneda 635, 9 de julio, Buenos Aires, Argentina</p>
-        <p><strong>📞 Teléfono:</strong> +54 9 2317 566-684</p>
-        <p><strong>✉ Correo:</strong> 
-          <a href="mailto:odresnuevos2024.5@gmail.com">odresnuevos2024.5@gmail.com</a>
+    <section
+      id="escuela"
+      class="section relative min-h-screen py-16 px-4 flex flex-col items-center justify-center"
+      data-theme="escuela"
+      aria-labelledby="escuela-title"
+    >
+      <div class="relative z-10 text-center max-w-7xl w-full p-6">
+        <h2 id="escuela-title" class="text-4xl md:text-5xl font-extrabold mb-8 text-blue-700 font-montserrat">
+          Nuestras Escuelas de Formación
+        </h2>
+        <p class="text-lg md:text-xl mb-12 max-w-4xl mx-auto text-gray-700 font-open-sans">
+          Sumérgete en un aprendizaje profundo y transformador con nuestras escuelas especializadas. Prepárate para crecer en tu fe y ministerio.
         </p>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+        >
+          <div
+            class="card bg-white text-gray-900 rounded-xl shadow-xl overflow-hidden transform relative flex flex-col"
+            data-date="2025-04-12"
+          >
+            <div
+              class="card-image w-full h-40 bg-cover bg-center relative"
+              style="background-image: url('https://img.freepik.com/foto-gratis/ninos-sonrientes-tomas-medias-posando-juntos_23-2149073581.jpg?w=740&t=st=1708198800~exp=1708199400~hmac=5301259930e6318c289c69f1b2a289a8561126130635197b3d676146b5409532');"
+              role="img"
+              aria-label="Imagen de estudiantes estudiando juntos."
+            >
+              <div
+                class="card-image-overlay absolute inset-0 flex items-end justify-center p-4"
+              >
+                <h3 class="card-title-overlay text-2xl font-bold text-white font-montserrat">
+                  Fundamentos Bíblicos
+                </h3>
+              </div>
+            </div>
+            <div class="card-content p-6 flex flex-col flex-grow">
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Modalidad: Online</strong>
+              </p>
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Horario: Lunes 19:00 - 21:00 hs</strong>
+              </p>
+              <p class="fecha-inicio text-sm text-gray-600 mb-3 font-open-sans text-left">
+                Sábado: <span id="fecha-fundamentos">12 de Abril, 2025</span>
+              </p>
+
+              <p class="text-base text-gray-700 font-open-sans text-center flex-grow flex items-center justify-center mb-4">
+                Un estudio profundo de las verdades esenciales de la fe cristiana, construyendo una base sólida para tu caminar con Dios.
+              </p>
+
+              <a
+                href="#inscripcion-fundamentos"
+                class="card-cta-button block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-full transition-colors duration-300 text-lg font-montserrat transform mt-auto"
+                aria-label="Inscribirse en Fundamentos Bíblicos"
+                >Más Información</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card bg-white text-gray-900 rounded-xl shadow-xl overflow-hidden transform relative flex flex-col"
+            data-date="2025-06-21"
+          >
+            <div
+              class="card-image w-full h-40 bg-cover bg-center relative"
+              style="background-image: url('https://img.freepik.com/foto-gratis/grupo-personas-orando-juntos_23-2150993077.jpg?w=740&t=st=1719230000~exp=1719230600~hmac=b6f5d1e2e6c8e3e4a7c8e9d0e1f0a2f9c3f5d6e7f8a9b0c1d2e3f4a5b6c7d8e9');"
+              role="img"
+              aria-label="Imagen de personas orando, representando profecía."
+            >
+              <div
+                class="card-image-overlay absolute inset-0 flex items-end justify-center p-4"
+              >
+                <h3 class="card-title-overlay text-2xl font-bold text-white font-montserrat">
+                  Profecía Aplicada
+                </h3>
+              </div>
+            </div>
+            <div class="card-content p-6 flex flex-col flex-grow">
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Modalidad: Presencial</strong>
+              </p>
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Horario: Sábados 10:00 - 12:00 hs</strong>
+              </p>
+              <p class="fecha-inicio text-sm text-gray-600 mb-3 font-open-sans text-left">
+                Sábado: <span id="fecha-profecia">21 de Junio, 2025</span>
+              </p>
+
+              <p class="text-base text-gray-700 font-open-sans text-center flex-grow flex items-center justify-center mb-4">
+                Aprende a discernir y fluir en el don profético de una manera práctica y bíblica para el edifico de la iglesia.
+              </p>
+
+              <a
+                href="#inscripcion-profecia"
+                class="card-cta-button block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-full transition-colors duration-300 text-lg font-montserrat transform mt-auto"
+                aria-label="Inscribirse en Profecía Aplicada"
+                >Más Información</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card bg-white text-gray-900 rounded-xl shadow-xl overflow-hidden transform relative flex flex-col"
+            data-date="2025-08-16"
+          >
+            <div
+              class="card-image w-full h-40 bg-cover bg-center relative"
+              style="background-image: url('https://img.freepik.com/foto-gratis/silueta-mujer-alcanzando-cruz-puesta-sol_1232-230.jpg?w=740&t=st=1719230100~exp=1719230700~hmac=a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5');"
+              role="img"
+              aria-label="Imagen de una silueta alcanzando una cruz, representando identidad."
+            >
+              <div
+                class="card-image-overlay absolute inset-0 flex items-end justify-center p-4"
+              >
+                <h3 class="card-title-overlay text-2xl font-bold text-white font-montserrat">
+                  Identidad en Cristo
+                </h3>
+              </div>
+            </div>
+            <div class="card-content p-6 flex flex-col flex-grow">
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Modalidad: Híbrida</strong>
+              </p>
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Horario: Martes 20:00 - 22:00 hs</strong>
+              </p>
+              <p class="fecha-inicio text-sm text-gray-600 mb-3 font-open-sans text-left">
+                Sábado: <span id="fecha-identidad">16 de Agosto, 2025</span>
+              </p>
+
+              <p class="text-base text-gray-700 font-open-sans text-center flex-grow flex items-center justify-center mb-4">
+                Descubre quién eres en Cristo y cómo esa verdad transforma cada área de tu vida para vivir en libertad.
+              </p>
+
+              <a
+                href="#inscripcion-identidad"
+                class="card-cta-button block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-full transition-colors duration-300 text-lg font-montserrat transform mt-auto"
+                aria-label="Inscribirse en Identidad en Cristo"
+                >Más Información</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card bg-white text-gray-900 rounded-xl shadow-xl overflow-hidden transform relative flex flex-col"
+            data-date="2025-10-18"
+          >
+            <div
+              class="card-image w-full h-40 bg-cover bg-center relative"
+              style="background-image: url('https://img.freepik.com/foto-gratis/manos-juntas-oracion-luz_1232-302.jpg?w=740&t=st=1719230200~exp=1719230800~hmac=a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5');"
+              role="img"
+              aria-label="Imagen de manos en oración, representando intercesión."
+            >
+              <div
+                class="card-image-overlay absolute inset-0 flex items-end justify-center p-4"
+              >
+                <h3 class="card-title-overlay text-2xl font-bold text-white font-montserrat">
+                  Intercesión Profética
+                </h3>
+              </div>
+            </div>
+            <div class="card-content p-6 flex flex-col flex-grow">
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Modalidad: Online</strong>
+              </p>
+              <p class="mb-2 text-base font-open-sans text-left">
+                <strong class="font-semibold text-blue-600">Horario: Jueves 19:30 - 21:30 hs</strong>
+              </p>
+              <p class="fecha-inicio text-sm text-gray-600 mb-3 font-open-sans text-left">
+                Sábado: <span id="fecha-intercesion">18 de Octubre, 2025</span>
+              </p>
+
+              <p class="text-base text-gray-700 font-open-sans text-center flex-grow flex items-center justify-center mb-4">
+                Desarrolla tu llamado a la oración y aprende a interceder con revelación para impactar tu entorno.
+              </p>
+
+              <a
+                href="#inscripcion-intercesion"
+                class="card-cta-button block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-full transition-colors duration-300 text-lg font-montserrat transform mt-auto"
+                aria-label="Inscribirse en Intercesión Profética"
+                >Más Información</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-box footer-social">
-        <p><strong>Nuestras Redes</strong></p>
-        <p><a href="https://instagram.com/ministerioodresnuevos" target="_blank">Instagram</a></p>
-        <p><a href="https://facebook.com/querit.odresnuevos" target="_blank">Facebook</a></p>
-        <p><a href="https://youtube.com/@odresnuevosministerio" target="_blank">YouTube</a></p>
+    </section>
+
+    <section
+      id="reuniones"
+      class="section relative min-h-screen py-16 px-4 flex flex-col items-center justify-center"
+      data-theme="reuniones"
+    >
+      <div
+        class="reuniones-container relative z-10 flex flex-col md:flex-row items-center justify-around w-full max-w-6xl space-y-10 md:space-y-0 md:space-x-12 p-8 rounded-xl shadow-2xl transform"
+      >
+        <div class="reuniones-info text-center md:text-left md:w-1/2">
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-purple-800 font-montserrat">
+            </h2>
+          <p class="text-lg md:text-xl mb-8 leading-relaxed font-open-sans text-gray-700">
+            </p>
+          <ul
+            class="list-disc list-inside text-xl md:text-2xl space-y-4 mb-8 text-gray-700 font-open-sans"
+          >
+            <li><strong class="font-semibold"></strong></li>
+            <li><strong class="font-semibold"></strong></li>
+            <li><strong class="font-semibold"></strong></li>
+          </ul>
+          <p class="text-3xl font-bold text-purple-600 italic font-montserrat">
+            </p>
+        </div>
+        <div
+          class="reuniones-mapa w-full md:w-1/2 max-w-xl rounded-lg overflow-hidden shadow-xl border-4 border-purple-500 transform"
+        >
+          <iframe
+            width="100%"
+            height="350"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.271970222165!2d-60.91696088820619!3d-34.75713437281313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95e2bf80b8b3d687%3A0x6b8d9a4b3d8f8a8!2sAv.%20Avellaneda%20635%2C%20B6500%209%20de%20Julio%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1708198900000!5m2!1ses!2sar"
+            title="Ubicación de Odres Nuevos en 9 de Julio, Buenos Aires"
+          ></iframe>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Ministerio Odres Nuevos — Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Código menú hamburguesa
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-  
-      menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navLinks.classList.toggle('active');
-      });
-  
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-        });
-      });
-  
-      document.addEventListener('click', (e) => {
-        const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
-        if (!isClickInside) {
-          navLinks.classList.remove('active');
-        }
-      });
-  
-      // Lógica para las fechas y tarjetas
-      const today = new Date();
-      const cards = document.querySelectorAll('.card[data-date]');
-      let closestCard = null;
-      let minDiff = Infinity;
-  
-      cards.forEach(card => {
-        const dateStr = card.dataset.date;
-        const [year, month, day] = dateStr.split('-').map(Number);
-        const date = new Date(year, month - 1, day);
-  
-        const options = { day: 'numeric', month: 'long' };
-        const fechaFormateada = new Intl.DateTimeFormat('es-AR', options).format(date);
-        const elementoFecha = card.querySelector('.fecha-inicio');
-        if (elementoFecha) {
-          elementoFecha.innerHTML = `<strong>Inicio:</strong> ${fechaFormateada} – 17:00 hs`;
-        }
-  
-        const diff = date - today;
-        if (diff >= 0 && diff < minDiff) {
-          minDiff = diff;
-          closestCard = card;
-        }
-      });
-  
-      if (closestCard) {
-        const badge = document.createElement('span');
-        badge.classList.add('badge');
-        badge.textContent = '🟢 Próxima Escuela';
-        closestCard.querySelector('.card-content').appendChild(badge);
-        closestCard.classList.add('highlight');
-      }
-  
-      // NUEVO: Cambio de tema en navbar según sección visible
-      const navbar = document.querySelector('.navbar');
-      const sections = document.querySelectorAll('.section');
-  
-      // Función para obtener la sección más visible en la ventana
-      function getMostVisibleSection() {
-        let maxVisibleHeight = 0;
-        let mostVisibleSection = null;
-  
-        sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          // Calcula altura visible dentro de viewport (limita entre 0 y altura viewport)
-          const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-          if (visibleHeight > maxVisibleHeight) {
-            maxVisibleHeight = visibleHeight;
-            mostVisibleSection = section;
-          }
-        });
-  
-        return mostVisibleSection;
-      }
-  
-      // Actualiza el tema del navbar basado en la sección más visible
-      function updateNavbarTheme() {
-        const section = getMostVisibleSection();
-        if (section) {
-          const theme = section.dataset.theme || 'default';
-          navbar.setAttribute('data-theme', theme);
-        }
-      }
-  
-      // Observador para detectar cambios de visibilidad (menos thresholds para mejor performance)
-      const observer = new IntersectionObserver(() => {
-        updateNavbarTheme();
-      }, {
-        threshold: [0.25, 0.5, 0.75, 1]
-      });
-  
-      sections.forEach(section => observer.observe(section));
-  
-      // También actualizar el tema al hacer scroll (más fluido y preciso)
-      window.addEventListener('scroll', () => {
-        updateNavbarTheme();
-      });
-  
-      // Actualizar al cargar la página
-      updateNavbarTheme();
-    });
-  </script>
-  
-  
-  
-  
-</body>
+    </section>
+
+    <footer id="contacto" class="footer bg-gray-900 text-white py-12 px-4">
+      <div
+        class="footer-container container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start space-y-10 md:space-y-0 md:space-x-8 text-center md:text-left"
+      >
+        <div class="footer-box footer-info w-full md:w-1/3 p-4">
+          <p class="mb-4 text-lg font-open-sans">
+            </p>
+          <p class="mb-4 text-lg font-open-sans">
+            </p>
+          <p class="text-lg font-open-sans">
+            <strong class="font-semibold text-blue-400">✉ Correo:</strong>
+            <a
+              href="mailto:odresnuevos2024.5@gmail.com"
+              class="text-blue-300 hover:underline transition-colors duration-200"
+              ></a
+            >
+          </p>
+        </div>
+        <div class="footer-box footer-social w-full md:w-1/3 p-4">
+          <p class="font-semibold text-xl mb-4 text-blue-400 font-montserrat"></p>
+          <p class="mb-3">
+            <a
+              href="https://instagram.com/ministerioodresnuevos"
+              target="_blank"
+              class="text-blue-300 hover:underline hover:text-pink-400 transition-colors duration-200 flex items-center justify-center md:justify-start font-open-sans"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="w-6 h-6 mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2.417a.75.75 0 01.07.755c.473 1.579.882 3.197 1.254 4.825a.75.75 0 01-.157.803l-2.093 1.769A.75.75 0 0110.125 10c-1.393-.195-2.738-.614-4.004-1.246a.75.75 0 01-.223-.745 10.5 10.5 0 011.084-2.827.75.75 0 01.815-.366h.002a.75.75 0 01.354.195l1.096.974c.224.2.298.472.298.745-.034.619-.071 1.238-.112 1.856l.169.15c.789.704 1.724 1.092 2.766 1.168a.75.75 0 01.765.733v.154c-.114 1.488-.344 2.943-.655 4.34a.75.75 0 01-.703.627h-.003a.75.75 0 01-.692-.516c-.347-1.077-.662-2.174-.947-3.284a.75.75 0 01-.065-.365v-.195a.75.75 0 01.215-.65c.348-.316.697-.632 1.04-.948a.75.75 0 01.996.111l1.782 1.782a.75.75 0 01.112.997c-.316.348-.632.697-.948 1.04a.75.75 0 01.65.215h-.195a.75.75 0 01-.365-.065c-1.11-.285-2.207-.6-3.284-.947a.75.75 0 01-.516-.692v-.003a.75.75 0 01.627-.703c1.397-.311 2.852-.541 4.34-.655a.75.75 0 01.154.008v.154a.75.75 0 01.733.765c.076 1.042.464 1.977 1.168 2.766l.15.169c.618-.041 1.237-.078 1.856-.112a.75.75 0 01.745.298l.974 1.096c.195.354.195.815-.002.366a10.5 10.5 0 01-2.827 1.084.75.75 0 01-.745-.223c-.632-1.266-1.051-2.611-1.246-4.004a.75.75 0 01.803-.157l1.769-2.093a.75.75 0 01.755.07c1.628.372 3.246.781 4.825 1.254a.75.75 0 01.755-.07.75.75 0 01.07-.755c-.473-1.579-.882-3.197-1.254-4.825a.75.75 0 01.157-.803l2.093-1.769a.75.75 0 01.803.157c1.266.632 2.611 1.051 4.004 1.246a.75.75 0 01.745-.223 10.5 10.5 0 012.827-1.084.75.75 0 01.366-.815l-.974-1.096a.75.75 0 01-.195-.354c.034-.619.071-1.238.112-1.856a.75.75 0 01.365-.065v-.195a.75.75 0 01-.215-.65c-.348-.316-.697-.632-1.04-.948a.75.75 0 01-.996-.111l-1.782-1.782a.75.75 0 01-.112-.997c.316-.348.632-.697.948-1.04a.75.75 0 01.65-.215h.195a.75.75 0 01.365.065c1.11.285 2.207.6 3.284.947a.75.75 0 01.516.692v.003a.75.75 0 01-.627.703c-1.397.311-2.852.541-4.34.655a.75.75 0 01-.154-.008v-.154a.75.75 0 01-.733-.765c-.076-1.042-.464-1.977-1.168-2.766l-.15-.169c-.618.041-1.237.078-1.856.112a.75.75 0 01-.745-.298l-.974-1.096a.75.75 0 01-.195-.354c.002-.002.002-.002 0 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              </a>
+          </p>
+          <p class="mb-3">
+            <a
+              href="https://facebook.com/querit.odresnuevos"
+              target="_blank"
+              class="text-blue-300 hover:underline hover:text-blue-400 transition-colors duration-200 flex items-center justify-center md:justify-start font-open-sans"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="w-6 h-6 mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.899 3.775-3.899 1.094 0 2.238.195 2.238.195v2.46h-1.262c-1.225 0-1.628.773-1.628 1.563V12h2.773l-.443 2.89h-2.33V22h7.039c4.991-.75 8.75-4.887 8.75-9.878z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              </a>
+          </p>
+          <p>
+            <a
+              href="https://youtube.com/@odresnuevosministerio"
+              target="_blank"
+              class="text-blue-300 hover:underline hover:text-red-400 transition-colors duration-200 flex items-center justify-center md:justify-start font-open-sans"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="w-6 h-6 mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M19.615 3.184c-1.013-.086-1.57.067-1.954.275a2.765 2.765 0 00-1.895.894c-.217.218-.423.447-.613.684-1.258 1.554-2.228 3.037-2.915 4.545a16.5 16.5 0 00-1.547 3.567.75.75 0 01-.137.491.75.75 0 01-.617.291c-.027-.005-.054-.008-.08-.013-.257-.05-.512-.11-.762-.187-.087-.02-.174-.042-.26-.065a.75.75 0 01-.617-.291.75.75 0 01-.137-.491 16.5 16.5 0 00-1.547-3.567c-.687-1.508-1.657-2.991-2.915-4.545-.19-.237-.396-.466-.613-.684a2.765 2.765 0 00-1.895-.894c-.384-.208-.941-.361-1.954-.275C2.893 3.16 2 3.987 2 5.01V19c0 1.01.893 1.84 1.905 1.916 1.013.086 1.57-.067 1.954-.275a2.765 2.765 0 001.895-.894c.217-.218.423-.447.613-.684 1.258-1.554 2.228-3.037 2.915-4.545a16.5 16.5 0 001.547-3.567.75.75 0 01.137-.491c.027.005.054.008.08.013.257.05.512.11.762.187.087.02.174.042.26.065a.75.75 0 01.617.291.75.75 0 01.137.491 16.5 16.5 0 001.547 3.567c.687 1.508 1.657 2.991 2.915 4.545.19.237.396.466.613.684a2.765 2.765 0 001.895.894c.384.208.941.361 1.954-.275C21.107 20.84 22 20.013 22 18.99V5.01c0-1.01-.893-1.84-1.905-1.916z"
+                />
+              </svg>
+              </a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="footer-bottom mt-10 pt-6 border-t border-gray-700 text-center text-sm text-gray-500 font-open-sans"
+      >
+        <p></p>
+      </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>
