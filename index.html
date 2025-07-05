@@ -10,43 +10,44 @@
   </head>
   <body class="font-open-sans text-gray-900">
     <header class="navbar fixed w-full z-50 py-4 transition duration-300 ease-in-out" data-theme="inicio">
-<nav class="container mx-auto flex items-center justify-between px-4 md:px-6 py-2 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm rounded-lg shadow-md mt-2">
-  <!-- Logo -->
-  <div class="logo-container">
-    <div class="logo-text text-2xl md:text-3xl font-extrabold text-gray-800 dark:text-white font-montserrat tracking-tight">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm shadow-md py-2 px-4 md:px-6">
+  <div class="container mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <div class="text-xl font-bold text-gray-800 dark:text-white font-montserrat">
       Odres Nuevos
     </div>
+
+    <!-- Botón menú móvil -->
+    <button
+      class="menu-toggle md:hidden text-gray-800 dark:text-white text-2xl hover:text-blue-600 dark:hover:text-blue-300 transition"
+      aria-label="Abrir menú"
+    >
+      ☰
+    </button>
+
+    <!-- Links -->
+    <ul
+      class="nav-links hidden flex-col absolute top-full left-0 w-full bg-white/95 dark:bg-gray-900/95 shadow-lg md:flex md:flex-row md:static md:shadow-none md:bg-transparent dark:md:bg-transparent space-y-2 md:space-y-0 md:space-x-6 transition-all duration-300 ease-in-out md:items-center rounded-b-lg md:rounded-none z-40"
+    >
+      <li class="nav-link-item">
+        <a href="#inicio" class="block py-2 px-4 text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-300 font-medium text-base md:text-sm">Inicio</a>
+      </li>
+      <li class="nav-link-item">
+        <a href="#guardianes" class="block py-2 px-4 text-gray-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-300 font-medium text-base md:text-sm">Guardianes</a>
+      </li>
+      <li class="nav-link-item">
+        <a href="#discipulados" class="block py-2 px-4 text-gray-800 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 font-medium text-base md:text-sm">Discipulados</a>
+      </li>
+      <li class="nav-link-item">
+        <a href="#escuela" class="block py-2 px-4 text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-300 font-medium text-base md:text-sm">Escuelas</a>
+      </li>
+      <li class="nav-link-item">
+        <a href="#reuniones" class="block py-2 px-4 text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-300 font-medium text-base md:text-sm">Reuniones</a>
+      </li>
+    </ul>
   </div>
-
-  <!-- Mobile menu button -->
-  <button
-    class="menu-toggle md:hidden text-gray-800 dark:text-white text-2xl hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200"
-    aria-label="Abrir menú"
-  >
-    ☰
-  </button>
-
-  <!-- Nav links -->
-  <ul
-    class="nav-links hidden flex-col absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-xl md:flex md:flex-row md:static md:shadow-none md:bg-transparent dark:md:bg-transparent space-y-1 md:space-y-0 md:space-x-5 lg:space-x-8 transition-all duration-300 ease-in-out md:items-center md:flex-grow z-50 rounded-b-lg md:rounded-none"
-  >
-    <li class="nav-link-item">
-      <a href="#inicio" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-300 transition font-semibold">Inicio</a>
-    </li>
-    <li class="nav-link-item">
-      <a href="#guardianes" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-300 transition font-semibold">Guardianes</a>
-    </li>
-    <li class="nav-link-item">
-      <a href="#discipulados" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition font-semibold">Discipulados</a>
-    </li>
-    <li class="nav-link-item">
-      <a href="#escuela" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition font-semibold">Escuelas</a>
-    </li>
-    <li class="nav-link-item">
-      <a href="#reuniones" class="block py-2 px-3 text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-300 transition font-semibold">Reuniones</a>
-    </li>
-  </ul>
 </nav>
+
 
 
     </header>

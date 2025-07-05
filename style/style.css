@@ -172,3 +172,57 @@
         opacity: 1;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       }
+
+      @media (max-width: 767px) {
+  nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0 0 0.75rem 0.75rem; /* sólo borde inferior redondeado */
+  }
+
+  .nav-links {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .nav-link-item a {
+    font-size: 1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.75rem;
+  }
+
+  .nav-links-mobile-open {
+    animation: slideIn 0.3s ease-out forwards;
+  }
+
+  .nav-links-mobile-close {
+    animation: slideOut 0.3s ease-in forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+  }
+}
